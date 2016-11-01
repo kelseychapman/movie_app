@@ -1,0 +1,61 @@
+<!--search block-->
+<div class="container">
+    <div class="row text-center">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <h2>Angular OMDB Search</h2>
+            <br>
+            <form name="getMovie" ng-submit="getMovies(movie)">
+              <h4>Enter your movie title here: </h4>
+                <input type="text" id="title" name="title" ng-model="movie.title" class="validate" required>
+                <button type="submit" class="btn btn success">search</button>
+                </h1>
+            </form>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+</div>
+<hr>
+<!--search block-->
+
+<!--Movie result-->
+<div class="container">
+    <div class="row text-center">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <img class="media-object" ng-src="{{results.Poster}}">
+                <h3 class="media-heading">{{results.Title}} ({{results.Year}})</h3>
+                <div>
+                    <p>Actors: {{results.Actors}}</p>
+                    <p>Awards: {{results.Awards}}</p>
+                    <p>Country: {{results.Country}}</p>
+                    <p>Genre: {{results.Genre}}</p>
+                    <p>Plot: {{results.Plot}}</p>
+                    <p>Rated: {{results.Rated}}</p>
+                    <p>Runtime: {{results.Runtime}}</p>
+                </div>
+                <div class="panel-footer"></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--Movie result-->
+
+<!--List of Movies-->
+<!-- <div class="container">
+    <div class="row text-center">
+            <div class="col-sm-6" ng-repeat="movie in view.omdb">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <a href="/#/show_page/{{movie.imdbID}}">
+                          Title: {{movie.Title}}<br>
+                        </div></a>
+
+                    <div class="panel-footer">Year: {{movie.Year}}</div>
+                </div>
+              </div>
+            </div>
+        </div>
+</div> -->
+<!--List of Movies-->
